@@ -10,12 +10,12 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const handleSignUp = async (e) => {
-    e.preventDefalut();
+    e.preventDefault();
     if (!name) {
       setError("Please enter your name.");
       return;
     }
-    if (!validateEmail(email)) {
+    if (!(email)) {
       setError("Please enter a valid email address.");
       return;
     }
